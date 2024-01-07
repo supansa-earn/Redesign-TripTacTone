@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Quicksand"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Inter"
+          rel="stylesheet"
+        />
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    </head>
+    <style>
+        body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Inter;
+    }
+ .title {
+      padding: 26px 135px;
+      columns: 2;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e9e7e6;
+      background: #fff;
+    }
+    .login_btn {
+      height: 48px;
+      padding: 14px 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      color: #f4592f;
+      font-family: Quicksand;
+      font-size: 29px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      padding-right: 2px;
+    }
+    button {
+      border-radius: 6px;
+      border: none;
+      font-family: Inter;
+      outline: 0;
+      display: inline-block;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      /* 19.2px */
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      background-color: #c44827;
+      cursor: pointer;
+      color: white;
+      padding: 18px 24px;
+    }
+
+    button:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.1) 100%
+        ),
+        #c44827;
+      box-shadow: 0px 0px 4px 0px #f89074;
+      color: white;
+    }
+    .nav_btn {
+      color: #4a4341;
+      /* Button/16 */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 19.2px */
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+      display: inline-block;
+      padding: 18px 16px 18px 0px;
+    }
+    .nav_btn:hover {
+      color: #ebaa99;
+      border: none;
+      background-color: inherit;
+      display: inline-block;
+      box-shadow: none;
+    }
+    .header {
+      text-align: center;
+      font-family: Quicksand;
+      font-size: 76px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 91.2px */
+      letter-spacing: -0.3px;
+      color: #000;
+      display: flex;
+      justify-content: center;
+    }
+    </style>
+    <body>
+        <nav class="title">
+            <div style="display: flex; align-items: center;">
+              <div class="logo">Trip Tac Tone</div>
+              <img
+                width="40px"
+                src="Untitled.png"
+                style="border: 1px solid transparent; padding-right: 24px;"
+              />
+              <button class="nav_btn">Home</button>
+              <button class="nav_btn">discover</button>
+              <button class="nav_btn">share space</button>
+            </div>
+      
+            <div style="display: flex; justify-content: end; align-items: center;">
+              <svg
+                style="padding-right: 24px;"
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+              >
+                <path
+                  d="M14.25 4.5C16.8359 4.5 19.3158 5.52723 21.1443 7.35571C22.9728 9.18419 24 11.6641 24 14.25C24 16.665 23.115 18.885 21.66 20.595L22.065 21H23.25L30.75 28.5L28.5 30.75L21 23.25V22.065L20.595 21.66C18.8258 23.1702 16.5761 23.9999 14.25 24C11.6641 24 9.18419 22.9728 7.35571 21.1443C5.52723 19.3158 4.5 16.8359 4.5 14.25C4.5 11.6641 5.52723 9.18419 7.35571 7.35571C9.18419 5.52723 11.6641 4.5 14.25 4.5ZM14.25 7.5C10.5 7.5 7.5 10.5 7.5 14.25C7.5 18 10.5 21 14.25 21C18 21 21 18 21 14.25C21 10.5 18 7.5 14.25 7.5Z"
+                  fill="#4A4341"
+                />
+              </svg>
+              <button class="login_btn">Log in</button>
+            </div>
+          </nav>
+    </body>
+</html>

@@ -1,13 +1,458 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Inter;
+    }
+    button {
+      border-radius: 6px;
+      border: none;
+      font-family: Inter;
+      outline: 0;
+      display: inline-block;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      /* 19.2px */
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      background-color: #c44827;
+      cursor: pointer;
+      color: white;
+      padding: 18px 24px;
+    }
 
-    </head>
-    <style>
+    button:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.1) 100%
+        ),
+        #c44827;
+      box-shadow: 0px 0px 4px 0px #f89074;
+      color: white;
+    }
+    .nav_btn {
+      color: #4a4341;
+      /* Button/16 */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 19.2px */
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+      display: inline-block;
+      padding: 18px 16px 18px 0px;
+    }
+    .nav_btn:hover {
+      color: #ebaa99;
+      border: none;
+      background-color: inherit;
+      display: inline-block;
+      box-shadow: none;
+    }
+    .title {
+      padding: 26px 135px;
+      columns: 2;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e9e7e6;
+      background: #fff;
+    }
+    .login_btn {
+      height: 48px;
+      padding: 14px 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      color: #f4592f;
+      font-family: Quicksand;
+      font-size: 29px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      padding-right: 2px;
+    }
+    .header {
+      text-align: center;
+      font-family: Quicksand;
+      font-size: 76px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 91.2px */
+      letter-spacing: -0.3px;
+      color: #000;
+      display: flex;
+      justify-content: center;
+    }
+    .home_content {
+      padding: 80px 135px 0px 135px;
+      font-family: Inter;
+    }
+    .sub {
+      display: flex;
+      justify-content: center;
+      color: #f4592f;
+      padding-bottom: 48px;
 
-    </style>
-    <body>
-        
-        
-    </body>
+      /* Title/medium */
+      font-family: Quicksand;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 25.2px */
+      letter-spacing: 0.19px;
+    }
+    .img {
+      height: 400px;
+      width: 1170px;
+      border-radius: 10px 10px 0px 0px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .card_column {
+      columns: 4;
+      column-gap: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-wrap: wrap;
+      grid-row-gap: 24px;
+      padding-bottom: 100px;
+    }
+    .card:hover {
+      box-shadow: 2px 1px 6px 1px rgba(0, 0, 0, 0.15),
+        1px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+    .card {
+      border-radius: 10px;
+      background: #fbf9f4;
+      transition: 0.3s;
+      width: 275px;
+      cursor: pointer;
+    }
+
+    .card-body {
+      padding: 12px 16px;
+    }
+
+    .plan_owner {
+      display: flex;
+      columns: 2;
+      gap: 6px;
+
+      align-items: center;
+    }
+
+    .bookmark {
+      display: flex;
+      columns: 2;
+
+      align-items: center;
+      justify-content: end;
+    }
+
+    .card_detail {
+      display: flex;
+      columns: 2;
+      justify-content: space-between;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      /* 19.2px */
+      letter-spacing: 0.5px;
+      padding-top: 12px;
+    }
+
+    .card-text {
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      /* 14.4px */
+      letter-spacing: 0.4px;
+      padding-top: 8px;
+    }
+
+    .card-title {
+      font-weight: 500;
+      /* Title/medium */
+      font-size: 21px;
+      line-height: 120%;
+      /* 25.2px */
+      letter-spacing: 0.19px;
+      display: inline-block;
+      width: 100%;
+      font-family: Quicksand;
+
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+    }
+    .card_img {
+      height: 250px;
+      width: 100%;
+      border-radius: 10px 10px 0px 0px;
+      object-fit: cover;
+    }
+    .footer {
+      background-color: #fbf9f4;
+      padding: 24px 135px;
+    }
+    .footer_content {
+      display: flex;
+      columns: 2;
+      justify-content: space-between;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      /* 19.2px */
+      letter-spacing: 0.5px;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <nav class="title">
+      <div style="display: flex; align-items: center;">
+        <div class="logo">Trip Tac Tone</div>
+        <img
+          width="40px"
+          src="Untitled.png"
+          style="border: 1px solid transparent; padding-right: 24px;"
+        />
+        <button class="nav_btn">Home</button>
+        <button class="nav_btn">discover</button>
+        <button class="nav_btn">share space</button>
+      </div>
+
+      <div style="display: flex; justify-content: end; align-items: center;">
+        <svg
+          style="padding-right: 24px;"
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          viewBox="0 0 36 36"
+          fill="none"
+        >
+          <path
+            d="M14.25 4.5C16.8359 4.5 19.3158 5.52723 21.1443 7.35571C22.9728 9.18419 24 11.6641 24 14.25C24 16.665 23.115 18.885 21.66 20.595L22.065 21H23.25L30.75 28.5L28.5 30.75L21 23.25V22.065L20.595 21.66C18.8258 23.1702 16.5761 23.9999 14.25 24C11.6641 24 9.18419 22.9728 7.35571 21.1443C5.52723 19.3158 4.5 16.8359 4.5 14.25C4.5 11.6641 5.52723 9.18419 7.35571 7.35571C9.18419 5.52723 11.6641 4.5 14.25 4.5ZM14.25 7.5C10.5 7.5 7.5 10.5 7.5 14.25C7.5 18 10.5 21 14.25 21C18 21 21 18 21 14.25C21 10.5 18 7.5 14.25 7.5Z"
+            fill="#4A4341"
+          />
+        </svg>
+        <button class="login_btn">Log in</button>
+      </div>
+    </nav>
+
+    <div class="home_content">
+      <span class="header">Discover</span>
+      <br />
+      <span class="sub">List of cafes in popular cities in Thailand</span>
+      <br />
+      <img src="discover.jpg" alt="Card image" class="img" />
+
+      <!-- card column -->
+
+      <div class="card_column">
+        <!-- card1 -->
+        <div class="card">
+          <img src="cafe/cafe1.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Koff & Things.th</span>
+            <br />
+            <span class="card-text">Chiang Mai</span>
+          </div>
+        </div>
+        <!-- card2 -->
+        <div class="card">
+          <img src="cafe/cafe2.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Oxygen</span>
+            <br />
+            <span class="card-text">Pattaya</span>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="card">
+          <img src="cafe/cafe3.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Babyccino</span>
+            <br />
+            <span class="card-text">Bangkok</span>
+          </div>
+        </div>
+        <!-- card4 -->
+        <div class="card">
+          <img src="cafe/cafe4.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Tongkan Cafe</span>
+            <br />
+            <span class="card-text">Kanchanaburi</span>
+          </div>
+        </div>
+        <!-- card5 -->
+        <div class="card">
+          <img src="cafe/cafe5.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Moonstone Cafe At Visit Panwa</span>
+            <br />
+            <span class="card-text">Phuket</span>
+          </div>
+        </div>
+        <!-- card6 -->
+        <div class="card">
+          <img src="cafe/cafe6.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Bluespace Cafe</span>
+            <br />
+            <span class="card-text">Pattaya</span>
+          </div>
+        </div>
+
+        <!-- card7 -->
+        <div class="card">
+          <img src="cafe/cafe7.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Treespresso cafe</span>
+            <br />
+            <span class="card-text">Chiang Mai</span>
+          </div>
+        </div>
+
+        <!-- card8 -->
+        <div class="card">
+          <img src="cafe/cafe8.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Hint Coffee</span>
+            <br />
+            <span class="card-text">Bangkok</span>
+          </div>
+        </div>
+
+        <!-- card9 -->
+        <div class="card">
+          <img src="cafe/cafe9.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">NatureTalk</span>
+            <br />
+            <span class="card-text">Chiang Mai</span>
+          </div>
+        </div>
+
+        <!-- card10 -->
+        <div class="card">
+          <img src="cafe/cafe10.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">ROOF Pudding and Cafe</span>
+            <br />
+            <span class="card-text">Phuket</span>
+          </div>
+        </div>
+
+        <!-- card11 -->
+        <div class="card">
+          <img src="cafe/cafe11.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">FO SHO BRO</span>
+            <br />
+            <span class="card-text">Bangkok</span>
+          </div>
+        </div>
+
+        <!-- card12 -->
+        <div class="card">
+          <img src="cafe/cafe12.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">LYCKA Cafe</span>
+            <br />
+            <span class="card-text">Kanchanaburi</span>
+          </div>
+        </div>
+
+        <!-- card13 -->
+        <div class="card">
+          <img src="cafe/cafe13.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Phli 봄 - Cafe x Khao Soi</span>
+            <br />
+            <span class="card-text">Chiang Mai</span>
+          </div>
+        </div>
+
+        <!-- card14 -->
+        <div class="card">
+          <img src="cafe/cafe14.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Brouke Cafe</span>
+            <br />
+            <span class="card-text">Pattaya</span>
+          </div>
+        </div>
+
+        <!-- card15 -->
+        <div class="card">
+          <img src="cafe/cafe15.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Kan Machi Cafe</span>
+            <br />
+            <span class="card-text">Kanchanaburi</span>
+          </div>
+        </div>
+
+        <!-- card16 -->
+        <div class="card">
+          <img src="cafe/cafe16.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">DAY'S CAFE</span>
+            <br />
+            <span class="card-text">Kanchanaburi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer">
+      <div class="footer_content">
+        <div style="display: flex; align-items: center;">
+          <div class="logo">Trip Tac Tone</div>
+          <img
+            width="40px"
+            src="Untitled.png"
+            style="border: 1px solid transparent;"
+          />
+        </div>
+
+        <span class="footer_title"
+          >ISNE Senior Project | Chiang Mai University
+        </span>
+      </div>
+    </div>
+  </body>
 </html>
