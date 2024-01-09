@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Inter;
+    }
+    button {
+      border-radius: 6px;
+      border: none;
+      font-family: Inter;
+      outline: 0;
+      display: inline-block;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      /* 19.2px */
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      background-color: #c44827;
+      cursor: pointer;
+      color: white;
+      padding: 18px 24px;
+    }
+
+    button:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.1) 100%
+        ),
+        #c44827;
+      box-shadow: 0px 0px 4px 0px #f89074;
+      color: white;
+    }
+    .nav_btn {
+      color: #4a4341;
+      /* Button/16 */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 19.2px */
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+      display: inline-block;
+      padding: 18px 16px 18px 0px;
+    }
+    .nav_btn:hover {
+      color: #ebaa99;
+      border: none;
+      background-color: inherit;
+      display: inline-block;
+      box-shadow: none;
+    }
+    .title {
+      padding: 26px 135px;
+      columns: 2;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e9e7e6;
+      background: #fff;
+    }
+    .login_btn {
+      height: 48px;
+      padding: 14px 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      color: #f4592f;
+      font-family: Quicksand;
+      font-size: 29px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      padding-right: 2px;
+    }
+    .header {
+      text-align: center;
+      color: var(--Primary-300, #da613f);
+      /* Display/Medium */
+      font-family: Quicksand;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 72px */
+      letter-spacing: -0.3px;
+      display: flex;
+    }
+    .home_content {
+      padding: 80px 135px 0px 135px;
+      font-family: Inter;
+      margin-bottom: 100px;
+    }
+    .footer {
+      background-color: #fbf9f4;
+      padding: 24px 135px;
+    }
+    .footer_content {
+      display: flex;
+      columns: 2;
+      justify-content: space-between;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      /* 19.2px */
+      letter-spacing: 0.5px;
+      align-items: center;
+    }
+    .container {
+      margin: 0px;
+      width: 100%;
+      padding: 0px;
+      height: 500px;
+    }
+    .carousel-indicators li {
+      background-color: #e9e7e6;
+      border-radius: 10px;
+    }
+    .sub {
+      columns: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
+    }
+    .prov {
+      font-family: Quicksand;
+      font-size: 29px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 34.8px */
+    }
+    .hashtag {
+      display: flex;
+      padding: 8px 24px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 99px;
+      border: 1px solid var(--Neutral-600, #635957);
+      font-family: Quicksand;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 21.6px */
+      letter-spacing: 0.13px;
+    }
+    .palette {
+      display: flex;
+      padding: 32px;
+      flex-direction: column;
+
+      border-radius: 10px;
+      border: 1px solid var(--Primary-100, #faeae5);
+      width: 490px;
+      margin-bottom: 32px;
+    }
+    .cafe_detail {
+      display: flex;
+      padding: 32px;
+      flex-direction: column;
+   
+      /* gap: 26px; */
+      border-radius: 10px;
+      border: 1px solid var(--Primary-100, #faeae5);
+      background: #fff;
+    }
+    .card_column{
+        columns: 4;
+      column-gap: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-wrap: wrap;
+      grid-row-gap: 24px;
+      margin-top: 32px;
+    }
+    .card:hover {
+      box-shadow: 2px 1px 6px 1px rgba(0, 0, 0, 0.15),
+        1px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+    .card {
+      border-radius: 10px;
+      background: #fbf9f4;
+      transition: 0.3s;
+      width: 275px;
+      cursor: pointer;
+    }
+
+    .card-body {
+      padding: 12px 16px;
+    }
+    .card-text {
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      /* 14.4px */
+      letter-spacing: 0.4px;
+      padding-top: 8px;
+    }
+
+    .card-title {
+      font-weight: 500;
+      /* Title/medium */
+      font-size: 21px;
+      line-height: 120%;
+      /* 25.2px */
+      letter-spacing: 0.19px;
+      display: inline-block;
+      width: 100%;
+      font-family: Quicksand;
+
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+    }
+    .card_img {
+      height: 250px;
+      width: 100%;
+      border-radius: 10px 10px 0px 0px;
+      object-fit: cover;
+    }
+
+  </style>
+  <body>
+    <nav class="title">
+      <div style="display: flex; align-items: center;">
+        <div class="logo">Trip Tac Tone</div>
+        <img
+          width="40px"
+          src="Untitled.png"
+          style="border: 1px solid transparent; margin-right: 24px;"
+        />
+        <button class="nav_btn">Home</button>
+        <button class="nav_btn">discover</button>
+        <button class="nav_btn">share space</button>
+      </div>
+
+      <div style="display: flex; justify-content: end; align-items: center;">
+        <svg
+          style="margin-right: 24px;"
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          viewBox="0 0 36 36"
+          fill="none"
+        >
+          <path
+            d="M14.25 4.5C16.8359 4.5 19.3158 5.52723 21.1443 7.35571C22.9728 9.18419 24 11.6641 24 14.25C24 16.665 23.115 18.885 21.66 20.595L22.065 21H23.25L30.75 28.5L28.5 30.75L21 23.25V22.065L20.595 21.66C18.8258 23.1702 16.5761 23.9999 14.25 24C11.6641 24 9.18419 22.9728 7.35571 21.1443C5.52723 19.3158 4.5 16.8359 4.5 14.25C4.5 11.6641 5.52723 9.18419 7.35571 7.35571C9.18419 5.52723 11.6641 4.5 14.25 4.5ZM14.25 7.5C10.5 7.5 7.5 10.5 7.5 14.25C7.5 18 10.5 21 14.25 21C18 21 21 18 21 14.25C21 10.5 18 7.5 14.25 7.5Z"
+            fill="#4A4341"
+          />
+        </svg>
+        <button class="login_btn">Log in</button>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img
+              src="koff/koff1.png"
+              alt="Koff & Things.th"
+              style="width: 100%; height: 500px; object-fit: cover;"
+            />
+          </div>
+
+          <div class="item">
+            <img
+              src="koff/koff2.png"
+              alt="Koff & Things.th"
+              style="width: 100%; height: 500px; object-fit: cover;"
+            />
+          </div>
+
+          <div class="item">
+            <img
+              src="koff/koff3.png"
+              alt="Koff & Things.th"
+              style="width: 100%; height: 500px; object-fit: cover;"
+            />
+          </div>
+
+          <div class="item">
+            <img
+              src="koff/koff4.png"
+              alt="Koff & Things.th"
+              style="width: 100%; height: 500px; object-fit: cover;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home_content">
+      <span class="header">Koff & Things.th</span>
+      <br />
+      <div class="sub">
+        <span class="prov">Chiang Mai, Thailand</span>
+        <div style="display: flex; columns: 3; column-gap: 12px;">
+          <div class="hashtag">
+            #Earthy
+          </div>
+          <div class="hashtag">
+            #Dark
+          </div>
+          <div class="hashtag">
+            #Japandi
+          </div>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div style="display: flex; columns: 2; column-gap: 32px; margin-bottom: 100px;">
+        <span style="font-size: 18px;">
+          Every visitor to Chiang Mai should make it a point to go cafe-hopping
+          in this beautiful city. Tucked away in Chiang Mai’s old town, lies the
+          up-and-coming cafe Koff And Things. Koff&Things.th started with Khun
+          Bim, one of the shop's partners. who used to study and work in the
+          hotel industry in Japan before returning to Chiang Mai to wait to
+          study further But because of the Covid situation This caused me to
+          have to stay in Chiang Mai for a long time and because I liked to
+          spend my free time often visiting coffee shops in Japan, this led to
+          the idea of opening a cafe with my aunt and uncle. Until it fits
+          perfectly with an old commercial building, corner room, which belongs
+          to Khun Bim's relatives. This place is outstanding in terms of
+          location. which faces the Chiang Mai Gate. With the potential to see
+          the city gate view and is in a tourist residential area like this
+          Therefore it is considered very suitable. before handing over the
+          duties to the architect from pommballstudio helped design by taking
+          advantage of the location in the old city area. Let's combine it with
+          the charm of Japan as Khun Bim is passionate about.
+        </span>
+
+        <div>
+          <div class="palette">
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 6px;
+                align-items: center;
+                margin-bottom: 16px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M20 14H6C3.8 14 2 15.8 2 18C2 20.2 3.8 22 6 22H20C21.1 22 22 21.1 22 20V16C22 14.9 21.1 14 20 14ZM6 20C4.9 20 4 19.1 4 18C4 16.9 4.9 16 6 16C7.1 16 8 16.9 8 18C8 19.1 7.1 20 6 20ZM6.3 12L13 5.3C13.8 4.5 15 4.5 15.8 5.3L18.6 8.1C19.4 8.9 19.4 10.1 18.6 10.9L17.7 12H6.3ZM2 13.5V4C2 2.9 2.9 2 4 2H8C9.1 2 10 2.9 10 4V5.5L2 13.5Z"
+                  fill="#DA613F"
+                />
+              </svg>
+              <span style="font-size: 21px;">Color palette</span>
+            </div>
+
+            <div style="display: flex;">
+              <div
+                style="background: #c10613; height: 98px; width: 85px;"
+              ></div>
+              <div
+                style="background-color: #c6916a; height: 98px; width: 85px;"
+              ></div>
+              <div
+                style="background-color: #714836; height: 98px; width: 85px;"
+              ></div>
+              <div
+                style="background-color: #f69a45; height: 98px; width: 85px;"
+              ></div>
+              <div
+                style="background-color: #f0dec1; height: 98px; width: 85px;"
+              ></div>
+            </div>
+          </div>
+
+          <div class="cafe_detail">
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 6px;
+                align-items: center;
+                margin-bottom: 12px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M12 11.5C11.337 11.5 10.7011 11.2366 10.2322 10.7678C9.76339 10.2989 9.5 9.66304 9.5 9C9.5 8.33696 9.76339 7.70107 10.2322 7.23223C10.7011 6.76339 11.337 6.5 12 6.5C12.663 6.5 13.2989 6.76339 13.7678 7.23223C14.2366 7.70107 14.5 8.33696 14.5 9C14.5 9.3283 14.4353 9.65339 14.3097 9.95671C14.1841 10.26 13.9999 10.5356 13.7678 10.7678C13.5356 10.9999 13.26 11.1841 12.9567 11.3097C12.6534 11.4353 12.3283 11.5 12 11.5ZM12 2C10.1435 2 8.36301 2.7375 7.05025 4.05025C5.7375 5.36301 5 7.14348 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 7.14348 18.2625 5.36301 16.9497 4.05025C15.637 2.7375 13.8565 2 12 2Z"
+                  fill="#DA613F"
+                />
+              </svg>
+              <span style="font-size: 21px;">Location</span>
+            </div>
+
+            <span>64 Ratchiangsean, Muang, Chiang Mai 50100</span>
+            <img src="map.png" alt="map" style="height: 230px; border-radius: 10px; width: 100%; object-fit: cover; margin: 26px 0px;">
+            <div
+            style="
+              display: flex;
+              align-items: flex-start;
+              gap: 6px;
+              align-items: center;
+              margin-bottom: 12px;
+            "
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 11.5C11.337 11.5 10.7011 11.2366 10.2322 10.7678C9.76339 10.2989 9.5 9.66304 9.5 9C9.5 8.33696 9.76339 7.70107 10.2322 7.23223C10.7011 6.76339 11.337 6.5 12 6.5C12.663 6.5 13.2989 6.76339 13.7678 7.23223C14.2366 7.70107 14.5 8.33696 14.5 9C14.5 9.3283 14.4353 9.65339 14.3097 9.95671C14.1841 10.26 13.9999 10.5356 13.7678 10.7678C13.5356 10.9999 13.26 11.1841 12.9567 11.3097C12.6534 11.4353 12.3283 11.5 12 11.5ZM12 2C10.1435 2 8.36301 2.7375 7.05025 4.05025C5.7375 5.36301 5 7.14348 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 7.14348 18.2625 5.36301 16.9497 4.05025C15.637 2.7375 13.8565 2 12 2Z" fill="#DA613F"/>
+          </svg>
+            </svg>
+            <span style="font-size: 21px;">Open-Close</span>  
+          </div>
+
+          <div style="width: 210px; padding: 0px 32px; display: flex; gap: 8px;    flex-wrap: wrap;">
+            <div  >
+            <span style="margin-right: 12px;">Sun</span>
+            <span>9AM - 5AM</span>
+            </div>
+            <div  >
+                <span style="margin-right: 12px;">Mon</span>
+                <span>9AM - 5AM</span>
+                </div>
+                <div  >
+                    <span style="margin-right: 12px;">Tue</span>
+                    <span>9AM - 5AM</span>
+                    </div>
+                    <div >
+                        <span style="margin-right: 12px;">Wed</span>
+                        <span>9AM - 5AM</span>
+                        </div>
+                        <div  >
+                            <span style="margin-right: 12px;">Thu</span>
+                            <span>9AM - 5AM</span>
+                            </div>
+                            <div  >
+                                <span style="margin-right: 12px;">Fri</span>
+                                <span>9AM - 5AM</span>
+                                </div>
+                                <div  >
+                                    <span style="margin-right: 12px;">Sat</span>
+                                    <span>9AM - 5AM</span>
+                                    </div>
+          </div>
+
+          <div
+              style="
+                display: flex;
+                
+                gap: 6px;
+                align-items: center;
+                margin-bottom: 12px;
+                margin-top: 26px;
+              "
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.2652 15.5 20.5196 15.6054 20.7071 15.7929C20.8946 15.9804 21 16.2348 21 16.5V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21C15.4913 21 11.1673 19.2089 7.97918 16.0208C4.79107 12.8327 3 8.50868 3 4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H7.5C7.76522 3 8.01957 3.10536 8.20711 3.29289C8.39464 3.48043 8.5 3.73478 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="#DA613F"/>
+              </svg>
+              <span style="font-size: 21px; margin-right: 12px;">Tel.</span>
+              <span style="font-size: 16px;">089-xxx-xxxx</span>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+
+
+
+      <span style="font-family: Quicksand;
+      font-size: 32px;">More cafes in Chiang Mai</span>
+      <div class="card_column">
+        <!-- card1 -->
+        <div class="card">
+            <img src="cafe/cafe7.png" alt="Card image" class="card_img" />
+            <div class="card-body">
+              <span class="card-title">Treespresso cafe</span>
+              <br />
+              <span class="card-text">Chiang Mai</span>
+            </div>
+          </div>
+        <!-- card2 -->
+        <div class="card">
+          <img src="cafe/cafe.png" alt="Card image" class="card_img" />
+          <div class="card-body">
+            <span class="card-title">Polaris Sunrise Café</span>
+            <br />
+            <span class="card-text">Chiang Mai</span>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="card">
+            <img src="cafe/cafe13.png" alt="Card image" class="card_img" />
+            <div class="card-body">
+              <span class="card-title">Phli 봄 - Cafe x Khao Soi</span>
+              <br />
+              <span class="card-text">Chiang Mai</span>
+            </div>
+          </div>
+        <!-- card4 -->
+        <div class="card">
+            <img src="cafe/cafe9.png" alt="Card image" class="card_img" />
+            <div class="card-body">
+              <span class="card-title">NatureTalk</span>
+              <br />
+              <span class="card-text">Chiang Mai</span>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer">
+      <div class="footer_content">
+        <div style="display: flex; align-items: center;">
+          <div class="logo">Trip Tac Tone</div>
+          <img
+            width="40px"
+            src="Untitled.png"
+            style="border: 1px solid transparent;"
+          />
+        </div>
+
+        <span class="footer_title"
+          >ISNE Senior Project | Chiang Mai University
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
