@@ -129,6 +129,7 @@
       width: 1170px;
       border-radius: 10px;
       object-fit: cover;
+      margin-bottom: 48px;
     }
     .card_column {
       columns: 4;
@@ -139,6 +140,7 @@
       flex-wrap: wrap;
       grid-row-gap: 24px;
       padding-bottom: 100px;
+      margin-top: 42px;
     }
     .card:hover {
       box-shadow: 2px 1px 6px 1px rgba(0, 0, 0, 0.15),
@@ -235,6 +237,70 @@
       letter-spacing: 0.5px;
       align-items: center;
     }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 99px;
+background: var(--Neutral-100, #FFF);
+box-shadow: 0px 0px 3px 0px #E8DED3;
+gap: 4px;
+display: flex;
+    width: fit-content;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 17px 24px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  border-radius: 99px;
+background: rgba(250, 234, 229, 0.40);
+padding: 17px 24px;
+}
+
+li a.active {
+  color: var(--Neutral-700, #4A4341);
+  border-radius: 99px;
+background: var(--Primary-100, #FAEAE5);
+padding: 17px 24px;
+}
+.column{
+      columns: 2;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+ 
+    }
+    .dropdown {
+ 
+      display: flex;
+padding: 16px 24px;
+align-items: center;
+gap: 6px;
+    border: none;
+      color: #7b706c;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: 0.5px;
+      border-radius: 99px;
+background: var(--Neutral-100, #FFF);
+box-shadow: 0px 0px 3px 0px #E8DED3;
+    }
+    .select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
   </style>
   <body>
     <nav class="title">
@@ -274,6 +340,44 @@
       <span class="sub">List of cafes in popular cities in Thailand</span>
       <br />
       <img src="discover.jpg" alt="Card image" class="img" />
+
+      <div style="columns: 2; column-gap: 24px; display: flex; justify-content: center; align-items: center;">
+        <ul>
+          <li><a class="active" href="#all">All</a></li>
+          <li><a href="#bkk">Bangkok</a></li>
+          <li><a href="#cm">Chiang Mai</a></li>
+          <li><a href="#py">Pattaya</a></li>
+          <li><a href="#pk">Phuket</a></li>
+          <li><a href="#kr">Kanchanaburi</a></li>
+        </ul>
+  
+        <div class="column">
+          <div>
+           
+            <select class="dropdown" name="languages" id="lang">
+              <option value="select">Mood & Tone</option>
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+              <option value="earthy">Earthy</option>
+              <option value="pastel">Pastel</option>
+            </select>
+          </div>
+  
+          <div>
+            
+            <select class="dropdown" name="languages" id="lang">
+              <option value="select">Style</option>
+              <option value="minimal">Minimal</option>
+              <option value="japandi">Japandi</option>
+              <option value="modern">Modern</option>
+              <option value="loft">Loft</option>
+  
+            </select>
+          </div>
+        </div>
+      </div>
+
+      
 
       <!-- card column -->
 

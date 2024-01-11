@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css?family=Inter"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <style>
@@ -213,13 +214,17 @@
       letter-spacing: 0.5px;
       display: flex;
       justify-content: flex-end;
+      cursor: pointer;
     }
     .cafe_name {
+      color: var(--Primary-300, #DA613F);
+
       font-family: Quicksand;
-      font-size: 29px;
+      font-size: 32px;
       font-style: normal;
       font-weight: 400;
       line-height: 120%; /* 34.8px */
+     
     }
     .time_date {
       margin-bottom: 8px;
@@ -229,6 +234,85 @@
       width: 200px;
       text-align: center;
     }
+    /* * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;} */
+
+/* Slideshow container */
+.slideshow-container {
+   
+height: 300px;
+  position: relative;
+  margin: auto;
+
+}
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+    width: 12px;
+height: 12px;
+  margin: 0 2px;
+  background-color: #E9E7E6;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+ 
+}
+
+.active {
+
+  background-color: #DA613F;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.w3-modal-content {
+   
+
+padding: 56px 100px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+}
+.palette {
+      display: flex;
+      padding: 32px;
+      flex-direction: column;
+
+      border-radius: 10px;
+      border: 1px solid var(--Primary-100, #faeae5);
+     
+      margin-bottom: 32px;
+    }
+    .cafe_detail {
+      display: flex;
+      padding: 32px;
+      flex-direction: column;
+   
+      /* gap: 26px; */
+      border-radius: 10px;
+      border: 1px solid var(--Primary-100, #faeae5);
+      background: #fff;
+    }
   </style>
   <body>
     <nav class="title">
@@ -237,7 +321,7 @@
         <img
           width="40px"
           src="Untitled.png"
-          style="border: 1px solid transparent; padding-right: 24px"
+          style="border: 1px solid transparent; margin-right: 24px;"
         />
         <button class="nav_btn">Home</button>
         <button class="nav_btn">discover</button>
@@ -246,7 +330,7 @@
 
       <div style="display: flex; justify-content: end; align-items: center">
         <svg
-          style="padding-right: 24px"
+        style="margin-right: 24px;"
           xmlns="http://www.w3.org/2000/svg"
           width="36"
           height="36"
@@ -421,10 +505,257 @@
               Photogenic time: 08.00-10.00
             </div>
 
-            <div class="modal_btn">Read full article</div>
+            <!-- <div class="modal_btn" id="myBtn">Read full article</div> -->
+            <div class="modal_btn"  onclick="document.getElementById('modal01').style.display='block'">Read full article</div>
           </div>
         </div>
       </div>
+
+<!-- modal -->
+      <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+        
+        <div class="w3-modal-content w3-animate-zoom">
+          
+          <span class="cafe_name">8 days a week</span>
+          <br>
+          <div  style="columns: 2; display: flex; justify-content: space-between; margin-bottom: 24px; margin-top: 12px;">
+            <span>Chiang Mai, Thailand</span>
+            <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  gap: 12px;
+                  flex: 1 0 0;
+                  width: 1170px;
+                  color: var(--Neutral-600, #635957);
+                  
+                "
+              >
+                <span>#Earthy</span>
+                <span>#Light</span>
+                <span>#Minimal</span>
+                <span>#Chiang Mai</span>
+              </div>
+          </div>
+    
+          <div class="slideshow-container">
+    
+            <div class="mySlides fade">
+              <img src="8days/8days1.png" style="  border-radius: 20px;     width: 100%;
+              
+              height: 300px; object-fit: cover; ">
+             
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="8days/8days2.png" style="border-radius: 20px;     width: 100%;
+
+              height: 300px; object-fit: cover;">
+            
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="8days/8days3.png" style="border-radius: 20px;     width: 100%;
+
+              height: 300px; object-fit: cover;">
+              
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="8days/8days4.png" style="border-radius: 20px;     width: 100%;
+
+                height: 300px; object-fit: cover;">
+                
+              </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align: center;">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+    
+      <!-- content -->
+      <div style="display: flex; columns: 2; column-gap: 32px; margin-top: 32px;">
+        <span style="font-size: 18px;">
+          8 days a week is located in the Nimman area. It is a comprehensive area in terms of food. District of light and sound All entertainment Makes traveling extremely convenient Because it has a very good location To the point that everyone who comes to this area must stop by the cafe 8 days a week.
+          As for the atmosphere of the 8 days a week cafe, it is decorated in a minimalist style that controls the tones of white, cream, and brown, giving a clean feeling that is easy on the eyes. All colors are contrasted well. and very perfect Including making the part of the cafe match the outside atmosphere that looks quiet and shady because of the large trees. Regardless of who is worried about whether there will be enough seats or not. Let me tell you that you can no longer worry. Because the shop has many zones for us to choose to sit.
+        </span>
+    
+        <div>
+          <div class="palette">
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 6px;
+                align-items: center;
+                margin-bottom: 16px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M20 14H6C3.8 14 2 15.8 2 18C2 20.2 3.8 22 6 22H20C21.1 22 22 21.1 22 20V16C22 14.9 21.1 14 20 14ZM6 20C4.9 20 4 19.1 4 18C4 16.9 4.9 16 6 16C7.1 16 8 16.9 8 18C8 19.1 7.1 20 6 20ZM6.3 12L13 5.3C13.8 4.5 15 4.5 15.8 5.3L18.6 8.1C19.4 8.9 19.4 10.1 18.6 10.9L17.7 12H6.3ZM2 13.5V4C2 2.9 2.9 2 4 2H8C9.1 2 10 2.9 10 4V5.5L2 13.5Z"
+                  fill="#DA613F"
+                />
+              </svg>
+              <span style="font-size: 21px; font-family: Quicksand;">Color palette</span>
+            </div>
+    
+            <div style="display: flex;">
+              <div
+                style="background: #724629; height: 55px; width: 60px;"
+              ></div>
+              <div
+                style="background-color: #CCC1AA; height: 55px; width: 60px;"
+              ></div>
+              <div
+                style="background-color: #F2CC5F; height: 55px; width: 60px;"
+              ></div>
+              <div
+                style="background-color: #B2B5AC; height: 55px; width: 60px;"
+              ></div>
+              <div
+                style="background-color: #3E1F0D; height: 55px; width: 60px;"
+              ></div>
+            </div>
+          </div>
+    
+          <div class="cafe_detail">
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 6px;
+                align-items: center;
+                margin-bottom: 12px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M12 11.5C11.337 11.5 10.7011 11.2366 10.2322 10.7678C9.76339 10.2989 9.5 9.66304 9.5 9C9.5 8.33696 9.76339 7.70107 10.2322 7.23223C10.7011 6.76339 11.337 6.5 12 6.5C12.663 6.5 13.2989 6.76339 13.7678 7.23223C14.2366 7.70107 14.5 8.33696 14.5 9C14.5 9.3283 14.4353 9.65339 14.3097 9.95671C14.1841 10.26 13.9999 10.5356 13.7678 10.7678C13.5356 10.9999 13.26 11.1841 12.9567 11.3097C12.6534 11.4353 12.3283 11.5 12 11.5ZM12 2C10.1435 2 8.36301 2.7375 7.05025 4.05025C5.7375 5.36301 5 7.14348 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 7.14348 18.2625 5.36301 16.9497 4.05025C15.637 2.7375 13.8565 2 12 2Z"
+                  fill="#DA613F"
+                />
+              </svg>
+              <span style="font-size: 21px; font-family: Quicksand;">Location</span>
+            </div>
+    
+            <span style="padding-left: 32px;">64 Ratchiangsean, Muang, Chiang Mai 50100</span>
+            
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 6px;
+                align-items: center;
+                margin: 26px 0px 12px 0px;
+              "
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M4 4H7L9 2H15L17 4H20C20.5304 4 21.0391 4.21071 21.4142 4.58579C21.7893 4.96086 22 5.46957 22 6V18C22 18.5304 21.7893 19.0391 21.4142 19.4142C21.0391 19.7893 20.5304 20 20 20H4C3.46957 20 2.96086 19.7893 2.58579 19.4142C2.21071 19.0391 2 18.5304 2 18V6C2 5.46957 2.21071 4.96086 2.58579 4.58579C2.96086 4.21071 3.46957 4 4 4ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#DA613F"/>
+            </svg>
+              <span style="font-size: 21px; font-family: Quicksand;">Photogenic time</span>
+              
+            </div>
+            
+            <span style="padding-left: 32px; color: var(--Sun-8-10, #FFA700);">08.00 - 10.00 </span>
+            
+    
+    
+            <div
+            style="
+              display: flex;
+              align-items: flex-start;
+              gap: 6px;
+              align-items: center;
+              margin: 26px 0px 12px 0px;
+            "
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 11.5C11.337 11.5 10.7011 11.2366 10.2322 10.7678C9.76339 10.2989 9.5 9.66304 9.5 9C9.5 8.33696 9.76339 7.70107 10.2322 7.23223C10.7011 6.76339 11.337 6.5 12 6.5C12.663 6.5 13.2989 6.76339 13.7678 7.23223C14.2366 7.70107 14.5 8.33696 14.5 9C14.5 9.3283 14.4353 9.65339 14.3097 9.95671C14.1841 10.26 13.9999 10.5356 13.7678 10.7678C13.5356 10.9999 13.26 11.1841 12.9567 11.3097C12.6534 11.4353 12.3283 11.5 12 11.5ZM12 2C10.1435 2 8.36301 2.7375 7.05025 4.05025C5.7375 5.36301 5 7.14348 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 7.14348 18.2625 5.36301 16.9497 4.05025C15.637 2.7375 13.8565 2 12 2Z" fill="#DA613F"/>
+          </svg>
+            </svg>
+            <span style="font-size: 21px; font-family: Quicksand;">Open-Close</span>  
+          </div>
+    
+          <div style="width: 210px; padding: 0px 32px; display: flex; gap: 8px;    flex-wrap: wrap;">
+            <div  >
+            <span style="margin-right: 12px;">Sun</span>
+            <span>9AM - 5AM</span>
+            </div>
+            <div  >
+                <span style="margin-right: 12px;">Mon</span>
+                <span>9AM - 5AM</span>
+                </div>
+                <div  >
+                    <span style="margin-right: 12px;">Tue</span>
+                    <span>9AM - 5AM</span>
+                    </div>
+                    <div >
+                        <span style="margin-right: 12px;">Wed</span>
+                        <span>9AM - 5AM</span>
+                        </div>
+                        <div  >
+                            <span style="margin-right: 12px;">Thu</span>
+                            <span>9AM - 5AM</span>
+                            </div>
+                            <div  >
+                                <span style="margin-right: 12px;">Fri</span>
+                                <span>9AM - 5AM</span>
+                                </div>
+                                <div  >
+                                    <span style="margin-right: 12px;">Sat</span>
+                                    <span>9AM - 5AM</span>
+                                    </div>
+          </div>
+    
+          <div
+              style="
+                display: flex;
+                
+                gap: 6px;
+                align-items: center;
+                margin-bottom: 12px;
+                margin-top: 26px;
+              "
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.2652 15.5 20.5196 15.6054 20.7071 15.7929C20.8946 15.9804 21 16.2348 21 16.5V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21C15.4913 21 11.1673 19.2089 7.97918 16.0208C4.79107 12.8327 3 8.50868 3 4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H7.5C7.76522 3 8.01957 3.10536 8.20711 3.29289C8.39464 3.48043 8.5 3.73478 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="#DA613F"/>
+              </svg>
+              <span style="font-size: 21px; margin-right: 12px; font-family: Quicksand;">Tel.</span>
+              <span style="font-size: 16px;">089-xxx-xxxx</span>
+            </div>
+    
+          </div>
+    
+    
+    
+        </div>
+      </div>
+    
+        </div>
+      </div>
+  
+
+
+
+
+  
 
  <!-- cafe list 2 -->
       <div
@@ -654,5 +985,32 @@ background: var(--Sun-14-17, #D14009);
         </span>
       </div>
     </div>
+
+
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+
+
+        
+        </script>
   </body>
 </html>

@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css?family=Inter"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <style>
@@ -143,11 +144,13 @@ letter-spacing: 0.6px;
       font-weight: 400;
       line-height: 120%;
       letter-spacing: 0.5px;
-      width: 95%;
+      width: 100%;
       margin-top: 12px;
+      height: 56px;
     }
     .dropdown {
-      width: 283.6px;
+      height: 56px;
+      width: 250px;
       padding: 16px;
       border-radius: 4px;
       border: 1px solid #e9e7e6;
@@ -159,12 +162,13 @@ letter-spacing: 0.6px;
       line-height: 120%;
       letter-spacing: 0.5px;
       margin-top: 12px;
-      appearance: none;
-      background: url("https://api.iconify.design/mdi/chevron-down.svg?color=%236b6e6c&width=24&padding-right=16px")
+      /* appearance: none; */
+      /* background: url("https://api.iconify.design/mdi/chevron-down.svg?color=%236b6e6c&width=24")
         no-repeat right center white;
-      -webkit-appearance: none;
+      -webkit-appearance: none; */
     }
     .picker {
+      height: 56px;
       width: 250px;
       padding: 16px;
       border-radius: 4px;
@@ -273,7 +277,7 @@ letter-spacing: 0.4px;
     }
     .select-img{
       padding: 32px 42px;
-      width: 86.5%;
+      width: 100%;
       display: flex;
       justify-content: center;
 align-items: center;
@@ -282,6 +286,7 @@ border: 1px solid var(--Neutral-200, #E9E7E6);
 background: var(--Neutral-100, #FFF);
 flex-wrap: nowrap;
     flex-direction: column;
+    cursor: pointer;
     }
     .footer {
       background-color: #fbf9f4;
@@ -300,6 +305,27 @@ flex-wrap: nowrap;
       letter-spacing: 0.5px;
       align-items: center;
     }
+    .w3-modal-content {
+   
+      display: flex;
+
+   padding: 56px 100px;
+   flex-direction: column;
+ 
+   border-radius: 20px;
+background: #FFF;
+   }
+   .pic_list{
+    height: 155px; 
+    object-fit: cover;
+    width: 175px;
+    cursor: pointer;
+   }
+   .pic_list:hover{
+    opacity: 0.3;
+   }
+   
+            
   </style>
   <body>
     <nav class="title">
@@ -308,7 +334,7 @@ flex-wrap: nowrap;
         <img
           width="40px"
           src="Untitled.png"
-          style="border: 1px solid transparent; padding-right: 24px;"
+          style="border: 1px solid transparent; margin-right: 24px;"
         />
         <button class="nav_btn">Home</button>
         <button class="nav_btn">discover</button>
@@ -317,7 +343,7 @@ flex-wrap: nowrap;
 
       <div style="display: flex; justify-content: end; align-items: center;">
         <svg
-          style="padding-right: 24px;"
+          style="margin-right: 24px;"
           xmlns="http://www.w3.org/2000/svg"
           width="36"
           height="36"
@@ -437,7 +463,7 @@ flex-wrap: nowrap;
           </div>
         </div>
 
-        <div class="select-img">
+        <div class="select-img" onclick="document.getElementById('modal01').style.display='block'">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
           <span style="color: #635957;">Select or drop image header</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -459,6 +485,71 @@ flex-wrap: nowrap;
         <span class="sub-title">from your computer</span>
       </div>
       </div>
+
+      <!-- modal -->
+      <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+        
+        <div class="w3-modal-content w3-animate-zoom">
+          
+          <span style="color: var(--Neutral-700, #4A4341);
+
+        
+          font-family: Quicksand;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%; ">Pick an image header</span>
+          <br>
+          <div style="display: flex; flex-direction: column;
+          align-items: flex-start; gap: 2px; width: 100%;">
+            <div  style="display: flex;
+            align-items: flex-start;
+            gap: 2px; width: 100%;"
+            >
+            
+              <img src="plan/plan7.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan8.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan3.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan2.jpg" alt="plan_pic" class="pic_list">
+  
+              </div>
+              <div  style="display: flex;
+            align-items: flex-start;
+            gap: 2px; width: 100%;"
+            >
+            
+              <img src="plan/plan1.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan9.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan4.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan5.jpg" alt="plan_pic" class="pic_list">
+  
+              </div>
+              <div  style="display: flex;
+            align-items: flex-start;
+            gap: 2px; width: 100%;"
+            >
+            
+              <img src="plan/plan10.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan6.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan11.jpg" alt="plan_pic" class="pic_list">
+              <img src="plan/plan12.jpg" alt="plan_pic" class="pic_list">
+  
+              </div>
+             
+          </div>
+          
+        </div>
+        </div>
+       
+
+
+
+
+
+
+
+
+
 
         <button class="create">create</button>
         </div>
