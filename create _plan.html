@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <style>
@@ -148,29 +149,58 @@ letter-spacing: 0.6px;
       margin-top: 12px;
       height: 56px;
     }
-    .dropdown {
+    .input:focus-visible{
+      border: 1px solid var(--Primary-200, #ebaa99);
+      outline: none;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.7;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+}
+    .picker:focus-visible{
+      border: 1px solid var(--Primary-200, #ebaa99);
+      outline: none;
+    }
+      .form-select:focus {
+  
+    /* outline: 0; */
+    box-shadow: none;
+    border: 1px solid var(--Primary-200, #ebaa99);
+}
+    
+    .form-select  {
       height: 56px;
       width: 250px;
       padding: 16px;
       border-radius: 4px;
       border: 1px solid #e9e7e6;
-      background: #fff;
       color: #7b706c;
       font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
       line-height: 120%;
       letter-spacing: 0.5px;
       margin-top: 12px;
+    background: url(https://api.iconify.design/mdi/chevron-down.svg?color=%237b706c&width=24) no-repeat;
+    background-position: right .5rem center;
+    background-color: white;
+    cursor: pointer;
+   
+
       /* appearance: none; */
       /* background: url("https://api.iconify.design/mdi/chevron-down.svg?color=%236b6e6c&width=24")
         no-repeat right center white;
       -webkit-appearance: none; */
+      
     }
+    
     .picker {
       height: 56px;
       width: 250px;
       padding: 16px;
+    padding-right: .5rem;
       border-radius: 4px;
       border: 1px solid #e9e7e6;
       background: #fff;
@@ -240,6 +270,7 @@ letter-spacing: 0.6px;
       border: 1px solid var(--Neutral-200, #e9e7e6);
       background: var(--Neutral-100, #fff);
       padding: 16px;
+    padding-right: .5rem;
       font-size: 16px;
       margin-top: 12px;
     }
@@ -336,8 +367,8 @@ background: #FFF;
           src="Untitled.png"
           style="border: 1px solid transparent; margin-right: 24px;"
         />
-        <button class="nav_btn">Home</button>
-        <button class="nav_btn">discover</button>
+        <button class="nav_btn" onclick="window.location.href='index.html'">Home</button>
+        <button class="nav_btn" onclick="window.location.href='discover.html'">discover</button>
         <button class="nav_btn">share space</button>
       </div>
 
@@ -417,7 +448,7 @@ background: #FFF;
           <div>
             <label class="label" for="style">Style</label>
             <br />
-            <select class="dropdown" name="languages" id="lang">
+            <select class="form-select form-select-lg " name="languages" id="lang">
               <option value="select">Select Style</option>
               <option value="minimal">Minimal</option>
               <option value="japandi">Japandi</option>
@@ -431,7 +462,7 @@ background: #FFF;
           <div>
             <label class="label" for="city">City</label>
             <br />
-            <select class="dropdown" name="languages" id="lang">
+            <select class="form-select form-select-lg " aria-label=".form-select-lg example">
               <option value="select">Select City in Thailand</option>
               <option value="minimal">Bangkok</option>
               <option value="japandi">Chiang Mai</option>
@@ -439,6 +470,7 @@ background: #FFF;
               <option value="loft">Phuket</option>
               <option value="loft">Kanchanaburi</option>
             </select>
+         
           </div>
 
           <div>
@@ -551,7 +583,7 @@ background: #FFF;
 
 
 
-        <button class="create">create</button>
+        <button class="create" onclick="window.location.href='plan.html'">create</button>
         </div>
       </div>
     </div>
